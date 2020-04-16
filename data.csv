@@ -1,0 +1,151 @@
+BookID, BookName, BookClass, Press, Years, Author, Price, TotalCollect, Stock
+0000024496, bookname-0, computer science, FDU Press, 1932, Alice, 2.08, 3, 3
+0000014385, bookname-1, geography, FDU Press, 2002, Tan Jiajie, 8.12, 4, 4
+0000016327, bookname-2, math, THU Press, 1956, Jiang Yanbo, 8.02, 4, 4
+0000026689, bookname-3, geography, Perlin Press, 1962, Jiang Yanbo, 4.13, 1, 1
+0000032007, bookname-4, geography, NJU Press, 1954, Jiang Yanbo, 10.71, 2, 2
+0000016676, bookname-5, computer science, ZJU Press, 1996, Ren Lianhai, 8.57, 5, 5
+0000012687, bookname-6, literature, SJTU Press, 1984, Jane, 8.06, 4, 4
+0000025963, bookname-7, physics, Zhejiang Press, 1937, Peter, 4.35, 3, 3
+0000026309, bookname-8, logic, PKU Press, 1986, Zhang Shimin, 6.72, 7, 7
+0000114936, bookname-9, biology, SJTU Press, 1995, Jane, 10.00, 6, 6
+0000009276, bookname-10, physics, NewYork Press, 1908, Shen Chenwei, 7.38, 3, 3
+0000006450, bookname-11, economic, NJU Press, 2001, Ren Lianhai, 8.06, 5, 5
+0000013324, bookname-12, computer science, PKU Press, 1915, Liu Junliang, 3.68, 2, 2
+0000004261, bookname-13, physics, SJTU Press, 1988, Peter, 6.71, 4, 4
+0000025311, bookname-14, math, NJU Press, 1934, Ren Lianhai, 6.55, 7, 7
+0000003401, bookname-15, physics, SJTU Press, 1969, Yang Yuke, 8.30, 4, 4
+0000000853, bookname-16, economic, PKU Press, 1984, Alice, 10.85, 2, 2
+0000016632, bookname-17, physics, NewYork Press, 2009, Mike, 8.84, 1, 1
+0000021398, bookname-18, geography, FDU Press, 1967, Jin Yilong, 2.20, 4, 4
+0000013637, bookname-19, economic, NKU Press, 1913, Tom, 2.94, 7, 7
+0000024872, bookname-20, computer science, NKU Press, 2000, Shen Chenwei, 10.94, 2, 2
+0000014753, bookname-21, computer science, Perlin Press, 1962, Wang Junjie, 2.01, 2, 2
+0000031332, bookname-22, computer science, PKU Press, 1962, Alex, 8.91, 3, 3
+0000004397, bookname-23, economic, LA Press, 1949, Alex, 4.98, 5, 5
+0000030235, bookname-24, economic, THU Press, 1923, Wu Zhaohui, 1.26, 4, 4
+0000021969, bookname-25, geography, LA Press, 1934, Jane, 4.75, 1, 1
+0000026960, bookname-26, computer science, NewYork Press, 2009, Jiang Yanbo, 7.57, 1, 1
+0000032322, bookname-27, literature, PKU Press, 1909, Jane, 9.16, 3, 3
+0000006158, bookname-28, geography, PKU Press, 1940, Alex, 5.13, 7, 7
+0000002800, bookname-29, literature, China Press, 2010, Alice, 6.11, 1, 1
+0000022977, bookname-30, biology, Zhejiang Press, 1903, Alex, 8.34, 4, 4
+0000008720, bookname-31, literature, NKU Press, 1944, Zhang Shimin, 1.40, 4, 4
+0000006820, bookname-32, logic, THU Press, 1939, Haha, 8.16, 1, 1
+0000025932, bookname-33, physics, NewYork Press, 1988, Gu Zhehan, 5.09, 1, 1
+0000027417, bookname-34, geography, ZJU Press, 1992, Jiang Yanbo, 1.73, 1, 1
+0000007094, bookname-35, economic, Perlin Press, 1968, Peter, 10.07, 3, 3
+0000031493, bookname-36, geography, NewYork Press, 1937, Guo Ziyang, 10.82, 1, 1
+0000030985, bookname-37, computer science, FDU Press, 1998, Ren Lianhai, 5.28, 5, 5
+0000017040, bookname-38, computer science, China Press, 1911, Guo Ziyang, 6.23, 5, 5
+0000026482, bookname-39, biology, NKU Press, 2008, Alice, 1.19, 1, 1
+0000017106, bookname-40, economic, ZJU Press, 1938, Alice, 8.12, 7, 7
+0000021317, bookname-41, philosophy, ZJU Press, 1904, Haha, 4.63, 7, 7
+0000002131, bookname-42, philosophy, Zhejiang Press, 1917, Jin Yilong, 7.94, 7, 7
+0000008304, bookname-43, computer science, THU Press, 2000, Mike, 8.12, 2, 2
+0000015977, bookname-44, logic, Zhejiang Press, 2003, Yang Yuke, 3.94, 4, 4
+0000014219, bookname-45, chemistry, THU Press, 1915, Alice, 2.95, 2, 2
+0000032221, bookname-46, biology, SJTU Press, 1976, Yang Yuke, 1.37, 3, 3
+0000003283, bookname-47, chemistry, Zhejiang Press, 1917, Mike, 3.86, 7, 7
+0000025180, bookname-48, literature, THU Press, 1914, Haha, 4.77, 7, 7
+0000013690, bookname-49, economic, THU Press, 1969, Zhang Shimin, 1.92, 2, 2
+0000010646, bookname-50, logic, Zhejiang Press, 1932, Jiang Yanbo, 9.58, 3, 3
+0000008197, bookname-51, math, FDU Press, 2005, Liu Junliang, 6.61, 2, 2
+0000031788, bookname-52, philosophy, ZJU Press, 1914, Jiang Yanbo, 3.19, 7, 7
+0000025270, bookname-53, philosophy, ZJU Press, 2009, Ren Lianhai, 1.51, 1, 1
+0000021419, bookname-54, biology, FDU Press, 1975, Shen Chenwei, 8.68, 1, 1
+0000024380, bookname-55, math, NJU Press, 1905, Tan Jiajie, 5.13, 6, 6
+0000002634, bookname-56, economic, NKU Press, 1990, Alice, 4.61, 6, 6
+0000017680, bookname-57, logic, Perlin Press, 2012, Yang Yuke, 6.04, 6, 6
+0000020524, bookname-58, geography, THU Press, 1901, Shen Chenwei, 2.30, 4, 4
+0000021581, bookname-59, logic, SJTU Press, 1923, Wu Zhaohui, 4.61, 5, 5
+0000022351, bookname-60, logic, NewYork Press, 1972, Yang Yuke, 2.20, 7, 7
+0000014577, bookname-61, math, Zhejiang Press, 1988, Tan Jiajie, 8.48, 5, 5
+0000021100, bookname-62, philosophy, China Press, 1924, Guo Ziyang, 8.71, 3, 3
+0000031414, bookname-63, biology, PKU Press, 1941, Wang Junjie, 8.82, 5, 5
+0000013434, bookname-64, biology, SJTU Press, 2002, Wang Haiwei, 7.99, 7, 7
+0000024588, bookname-65, computer science, NKU Press, 1902, Tom, 4.90, 3, 3
+0000017813, bookname-66, physics, China Press, 1989, Mike, 1.79, 5, 5
+0000021222, bookname-67, logic, SJTU Press, 1960, Peter, 4.47, 5, 5
+0000028524, bookname-68, economic, NewYork Press, 1909, Wang Junjie, 2.80, 6, 6
+0000025669, bookname-69, economic, Perlin Press, 1997, Yang Yuke, 1.80, 6, 6
+0000026251, bookname-70, computer science, Perlin Press, 1950, Alice, 5.98, 5, 5
+0000001999, bookname-71, economic, THU Press, 1920, Guo Ziyang, 1.44, 4, 4
+0000024352, bookname-72, computer science, FDU Press, 1919, Haha, 6.85, 7, 7
+0000006876, bookname-73, logic, FDU Press, 1968, Tan Jiajie, 3.92, 1, 1
+0000006915, bookname-74, biology, ZJU Press, 1976, Guo Ziyang, 8.03, 2, 2
+0000021166, bookname-75, computer science, PKU Press, 1959, Wang Haiwei, 3.27, 1, 1
+0000009261, bookname-76, economic, Perlin Press, 1936, Liu Junliang, 5.32, 2, 2
+0000021470, bookname-77, economic, LA Press, 2011, Jane, 9.28, 6, 6
+0000016868, bookname-78, philosophy, LA Press, 1971, Ren Lianhai, 4.31, 5, 5
+0000002330, bookname-79, math, NewYork Press, 1924, Wu Zhaohui, 3.70, 2, 2
+0000030784, bookname-80, biology, China Press, 1993, Peter, 4.57, 2, 2
+0000025037, bookname-81, physics, FDU Press, 1967, Wang Junjie, 10.85, 7, 7
+0000030941, bookname-82, economic, NJU Press, 1959, Shen Chenwei, 1.75, 4, 4
+0000000332, bookname-83, chemistry, NewYork Press, 2004, Gu Zhehan, 1.49, 5, 5
+0000010452, bookname-84, computer science, THU Press, 1925, Liu Junliang, 2.23, 2, 2
+0000009614, bookname-85, computer science, FDU Press, 1976, Wu Zhaohui, 2.86, 4, 4
+0000004936, bookname-86, philosophy, NewYork Press, 1954, Yang Yuke, 10.15, 4, 4
+0000014510, bookname-87, logic, LA Press, 1935, Jane, 1.62, 2, 2
+0000006452, bookname-88, math, NKU Press, 1993, Gu Zhehan, 1.02, 5, 5
+0000010900, bookname-89, philosophy, LA Press, 1934, Zheng Qiang, 4.75, 2, 2
+0000015934, bookname-90, literature, China Press, 1981, Shen Chenwei, 2.92, 2, 2
+0000026790, bookname-91, logic, THU Press, 1966, Mike, 6.47, 2, 2
+0000026547, bookname-92, computer science, Zhejiang Press, 1989, Jin Yilong, 5.72, 5, 5
+0000008012, bookname-93, computer science, THU Press, 1946, Ren Lianhai, 6.92, 2, 2
+0000003580, bookname-94, biology, LA Press, 1959, Yang Yuke, 9.80, 7, 7
+0000030116, bookname-95, math, NJU Press, 1914, Guo Ziyang, 7.68, 3, 3
+0000004650, bookname-96, chemistry, Perlin Press, 1932, Wang Junjie, 3.58, 1, 1
+0000013768, bookname-97, literature, NewYork Press, 1995, Jiang Yanbo, 4.45, 1, 1
+0000028789, bookname-98, math, SJTU Press, 1957, Tom, 10.05, 5, 5
+0000025706, bookname-99, geography, China Press, 1988, Zheng Qiang, 6.70, 6, 6
+0000013747, bookname-100, chemistry, PKU Press, 1910, Jiang Yanbo, 4.80, 6, 6
+0000014511, bookname-101, economic, THU Press, 1916, Ren Lianhai, 2.11, 6, 6
+0000016696, bookname-102, computer science, NKU Press, 1967, Peter, 10.03, 4, 4
+0000016795, bookname-103, philosophy, Perlin Press, 1924, Jin Yilong, 8.46, 5, 5
+0000017829, bookname-104, logic, THU Press, 1901, Yang Yuke, 7.87, 7, 7
+0000024676, bookname-105, logic, ZJU Press, 1921, Tom, 7.00, 4, 4
+0000031365, bookname-106, physics, THU Press, 1926, Jiang Yanbo, 8.05, 2, 2
+0000010119, bookname-107, logic, ZJU Press, 1946, Jiang Yanbo, 8.06, 5, 5
+0000021968, bookname-108, geography, NKU Press, 1936, Mike, 4.87, 4, 4
+0000013430, bookname-109, literature, LA Press, 1958, Gu Zhehan, 10.99, 7, 7
+0000016298, bookname-110, economic, Perlin Press, 1940, Jiang Yanbo, 1.13, 7, 7
+0000020021, bookname-111, chemistry, Zhejiang Press, 1933, Shen Chenwei, 7.72, 5, 5
+0000021498, bookname-112, math, NewYork Press, 1910, Wu Zhaohui, 9.29, 5, 5
+0000001352, bookname-113, geography, LA Press, 1905, Wang Junjie, 10.42, 5, 5
+0000015524, bookname-114, math, PKU Press, 2002, Peter, 9.67, 4, 4
+0000020914, bookname-115, chemistry, NKU Press, 1967, Gu Zhehan, 5.44, 1, 1
+0000019609, bookname-116, geography, PKU Press, 1939, Wang Haiwei, 4.38, 1, 1
+0000018946, bookname-117, geography, NJU Press, 2003, Yang Yuke, 6.04, 2, 2
+0000005875, bookname-118, literature, Perlin Press, 1918, Alice, 10.20, 7, 7
+0000006810, bookname-119, philosophy, LA Press, 1913, Haha, 4.36, 3, 3
+0000005842, bookname-120, biology, LA Press, 1979, Zhang Shimin, 6.32, 2, 2
+0000028343, bookname-121, literature, NJU Press, 1982, Jiang Yanbo, 1.78, 7, 7
+0000027582, bookname-122, literature, THU Press, 1963, Alice, 1.36, 2, 2
+0000005348, bookname-123, chemistry, NJU Press, 1929, Ren Lianhai, 9.30, 3, 3
+0000000946, bookname-124, math, NewYork Press, 1903, Zheng Qiang, 9.36, 2, 2
+0000024279, bookname-125, economic, NewYork Press, 1984, Liu Junliang, 1.89, 6, 6
+0000005927, bookname-126, physics, THU Press, 1999, Peter, 3.05, 6, 6
+0000008434, bookname-127, math, NewYork Press, 1987, Haha, 8.29, 2, 2
+0000027820, bookname-128, biology, Perlin Press, 2009, Peter, 8.68, 6, 6
+0000022488, bookname-129, math, SJTU Press, 1956, Shen Chenwei, 1.80, 5, 5
+0000016625, bookname-130, biology, NewYork Press, 1917, Jin Yilong, 8.89, 5, 5
+0000027353, bookname-131, computer science, NewYork Press, 2003, Shen Chenwei, 5.39, 3, 3
+0000015700, bookname-132, economic, THU Press, 1964, Gu Zhehan, 5.95, 5, 5
+0000020513, bookname-133, math, SJTU Press, 1999, Tan Jiajie, 7.59, 1, 1
+0000027216, bookname-134, physics, PKU Press, 2013, Peter, 4.78, 5, 5
+0000005101, bookname-135, biology, ZJU Press, 1986, Wu Zhaohui, 6.42, 6, 6
+0000021594, bookname-136, geography, Zhejiang Press, 1914, Wu Zhaohui, 7.91, 4, 4
+0000032311, bookname-137, economic, ZJU Press, 1995, Zheng Qiang, 7.24, 1, 1
+0000030992, bookname-138, math, PKU Press, 1937, Alice, 2.16, 5, 5
+0000023185, bookname-139, geography, THU Press, 1930, Wu Zhaohui, 6.33, 5, 5
+0000022473, bookname-140, biology, NKU Press, 1946, Wang Haiwei, 9.86, 5, 5
+0000019499, bookname-141, logic, PKU Press, 1902, Jane, 6.08, 7, 7
+0000031721, bookname-142, math, China Press, 1949, Jane, 6.64, 6, 6
+0000011325, bookname-143, math, FDU Press, 1991, Zheng Qiang, 9.70, 7, 7
+0000022657, bookname-144, math, NKU Press, 1969, Gu Zhehan, 2.04, 1, 1
+0000017219, bookname-145, math, FDU Press, 1963, Ren Lianhai, 2.01, 6, 6
+0000009250, bookname-146, geography, Perlin Press, 2013, Zhang Shimin, 8.78, 2, 2
+0000019920, bookname-147, literature, ZJU Press, 1959, Gu Zhehan, 5.57, 4, 4
+0000024819, bookname-148, literature, NKU Press, 1940, Jane, 8.51, 1, 1
+0000015336, bookname-149, biology, PKU Press, 1970, Alex, 1.46, 2, 2
