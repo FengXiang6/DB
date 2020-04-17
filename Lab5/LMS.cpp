@@ -7,7 +7,7 @@ void LibraryManageSystem::Welcome()
 	mMessager.Append("(1)Search         (2)Borrow      (3)Return");
 	mMessager.Append("(4)Update by file (5)Card Manage (6)Update manually");
 	mMessager.Append("(7)Print borrow record           (8)Show list");
-	mMessager.Append("(0)Quit");
+	mMessager.Append("(9)Create or Delete Card         (0)Quit");
 	mMessager.Append("Please input your operation code:");
 	mMessager.Print(true, true);
 }
@@ -24,6 +24,7 @@ void LibraryManageSystem::List()
 {
 	Query.clear();
 	Query.append("select * from book");
+	mLinker.CloseStatement();
 	mLinker.Execute(Query);
 	if (mLinker.GetLastError()) {
 		mMessager.PrintDirect("An error occured:", false, true);
@@ -441,6 +442,87 @@ void LibraryManageSystem::CardManage()
 	}
 }
 
+void LibraryManageSystem::CreateCard()
+{
+	unsigned choose;
+	mMessager.PrintDirect("Create or Delete Card -- 0 for creating, 1 for deleting, Enter for quit.");
+	try {
+		readIntegerX(choose);
+	}
+	catch (...) {
+		return;
+	}
+	if (choose == 0xffffffff) return;
+	else if (choose == 0) {
+		try {
+			readString(10, CardID);
+			readString(20, OwnerName);
+			readString(20, Department);
+			mMessager.PrintDirect("please input teacher or student for type information.");
+			readString(10, CardType);
+		}
+		catch (...) {
+			return;
+		}
+		if (!(notENTER(CardID)&&notENTER(OwnerName)&&notENTER(Department)&&notENTER(CardType))) {
+			mMessager.PrintDirect("Please specify the CardID!", false, true, 2);
+			return;
+		}
+		Query.clear();
+		Query.append("insert into card values(?,?,?,?);");
+		mLinker.CloseStatement();
+		mLinker.Prepare((SQLCHAR*)Query.c_str(), SQL_NTS);
+		mLinker.InVarchar(1, CardID, 10);
+		mLinker.InVarchar(2, OwnerName, 20);
+		mLinker.InVarchar(3, Department, 20);
+		mLinker.InVarchar(4, CardType, 10);
+		mLinker.Execute();
+		if (mLinker.GetLastError()) {
+			mMessager.PrintDirect("An error occured:", true, true);
+			mLinker.ReportError();
+			mMessager.PrintDirect("\n\n");
+			return;
+		}
+		else {
+			mMessager.PrintDirect("Successfully create a new card", true, true, 2);
+			return;
+		}
+	}
+	else if (choose == 1) {
+		try {
+			readString(10, CardID);
+		}
+		catch (...) {
+			return;
+		}
+		if (!notENTER(CardID)) {
+			mMessager.PrintDirect("please specify the CardID you want to delete.", false, true, 2);
+			return;
+		}
+		Query.clear();
+		Query.append("select delete_card(?);");
+		mLinker.CloseStatement();
+		mLinker.Prepare((SQLCHAR*)Query.c_str(), SQL_NTS);
+		mLinker.InVarchar(1, CardID, 10);
+		mLinker.Execute();
+		unsigned int state;
+		mLinker.GetInteger(1, state);
+		mLinker.Fetch();
+		if (state == 1) {
+			mMessager.PrintDirect("This card does not exist!", true, true, 2);
+			return;
+		}
+		else if (state == 2) {
+			mMessager.PrintDirect("Please return the borrowed books first!", true, true, 2);
+			return;
+		}
+		else if (state == 3) {
+			mMessager.PrintDirect("Delete the card successfully!", true, true, 2);
+			return;
+		}
+	}
+}
+
 void LibraryManageSystem::ReturnBook() 
 {
 	do {
@@ -514,11 +596,13 @@ void LibraryManageSystem::ReturnBook()
 
 	unsigned int state;
 	mLinker.GetInteger(1, state);
-	if (state == 1) {
-		mMessager.PrintDirect("Failed to return the book!", true, true, 2);
+	mLinker.Fetch();
+
+	if (state == 2){
+		mMessager.PrintDirect("Return the book successfully!", true, true, 2);
 	}
 	else {
-		mMessager.PrintDirect("Return the book successfully!", true, true, 2);
+		mMessager.PrintDirect("Failed to return the book!", true, true, 2);
 	}
 }
 
@@ -537,15 +621,15 @@ void LibraryManageSystem::UpdateMan()
 			readIntegerXYZ(Years, 10, strMinYear);
 			readFloatXYZ(Price, 10, strMinPrice);
 			readIntegerXYZ(TotalCollect, 10, strT);
-			readIntegerXYZ(Stock, 10, strS);
+			//readIntegerXYZ(Stock, 10, strS);
 		}
 		catch (exception &e)
 		{
-			continue;
+			return;
 		}
-		if (notENTER(BookID) && notENTER(BookName) && notENTER(BookClass) &&
+		if (!(notENTER(BookID) && notENTER(BookName) && notENTER(BookClass) &&
 			notENTER(Press) && notENTER(Author) && notENTER(strMinYear) &&
-			notENTER(strMinPrice) && notENTER(strT) && notENTER(strS)) 
+			notENTER(strMinPrice) && notENTER(strT)))
 		{
 			mMessager.PrintDirect("Do not input ENTER! Specify the information!");
 			continue;
@@ -557,6 +641,7 @@ void LibraryManageSystem::UpdateMan()
 	mLinker.Execute("call new_execute_queue_prepare();");
 	if (mLinker.GetLastError()) {
 		mLinker.ReportError();
+		return;
 	}
 
 	Query.clear();
@@ -568,7 +653,7 @@ void LibraryManageSystem::UpdateMan()
 
 	int lY = Years;
 	int lT = TotalCollect;
-	int lS = Stock;
+	int lS = Stock = lT;
 
 	mLinker.InVarchar(1, BookID, 10);
 	mLinker.InVarchar(2, BookName, 30);
@@ -589,26 +674,28 @@ void LibraryManageSystem::UpdateMan()
 	}
 
 	unsigned int state;
+	SQLCHAR State[10 + 1];
 	mLinker.GetInteger(1, state);
 	mLinker.Fetch();
-	if (state == 1) {
-		mMessager.PrintDirect("Failed to update the book", true, true, 2);
-	}
-	else {
+	if (state == 1 || state == 2) {
 		mMessager.PrintDirect("This book has been modified", true, true, 1);
 		mLinker.CloseStatement();
 		mLinker.Execute("select * from update_mid_table;");
 
+		
 		mLinker.GetVarchar(1, BookID, 10 + 1);
 		mLinker.GetVarchar(2, BookName, 30 + 1);
+		mLinker.GetVarchar(3, State, 10 + 1);
 
 		mMessager.MakeTable("BookID", 10 + 5, 1);
 		mMessager.MakeTable("BookName", 30, 1);
+		mMessager.MakeTable("State", 10, 1);
 		mMessager.EndTable();
 
 		while (mLinker.Fetch()) {
 			mMessager.MakeTable((char*)BookID, 10 + 5, 1);
 			mMessager.MakeTable((char*)BookName, 30, 1);
+			mMessager.MakeTable((char*)State, 10, 1);
 			mMessager.EndTable();
 		}
 		mMessager.PrintDirect("\n", false, false, 1);
@@ -677,12 +764,13 @@ void LibraryManageSystem::UpdateFile()
 	do {
 		char c = fgetc(fp);
 		int ret = fscanf(fp,
-			"%[^,], %[^,], %[^,], %[^,], %d, %[^,], %f, %d, %d",
+			"%[^,], %[^,], %[^,], %[^,], %d, %[^,], %f, %d",
 			BookID, BookName, BookClass,
 			Press, &lY, Author,
-			&Price, &lT, &lS);
+			&Price, &lT);
 		if (ret == EOF)break;
-
+		
+		lS = lT;
 		linecnt++;
 
 		mLinker.Execute();
@@ -817,8 +905,8 @@ void LibraryManageSystem::Function() {
 	mOpcode = -1;
 	string args;
 	getline(cin, args);
-	if (args.length() != 1 || args[0] - '0' < 0 || args[0] - '8'>0 || !notENTER(args)) {
-		mMessager.PrintDirect("Please input a operation code of integer in [0...5]!",
+	if (args.length() != 1 || args[0] - '0' < 0 || args[0] - '9'>0 || !notENTER(args)) {
+		mMessager.PrintDirect("Please input a operation code of integer in [0...9]!",
 			false, true, 2);
 		return;
 	}
@@ -859,6 +947,9 @@ void LibraryManageSystem::Function() {
 	else if (mOpcode == 8) {
 		List();
 	}
+	else if (mOpcode == 9) {
+		CreateCard();
+	}
 }
 
 void LibraryManageSystem::ReadString(int maxlen, SQLCHAR* tgt) {
@@ -893,7 +984,7 @@ void LibraryManageSystem::ReadInteger(unsigned int & tgt, int maxlen, SQLCHAR* s
 		return;
 	}
 	sscanf_s(tmp.c_str(), "%d", &mid);
-	if (mid == 0xffffffff || mid <= 0) {
+	if (mid == 0xffffffff || mid < 0) {
 		mMessager.PrintDirect("Invalid Input!",
 			false, true, 2);
 		throw exception();

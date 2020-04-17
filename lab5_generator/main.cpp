@@ -43,6 +43,6 @@ int main() {
 		float price = float(rand() % 1000 + 100) / 100.0;
 		printf("%.2f, ", price);
 		int tot = rand() % 7 + 1;
-		printf("%d, %d\n", tot, tot);
+		printf("%d\n", tot);
 	}
 }

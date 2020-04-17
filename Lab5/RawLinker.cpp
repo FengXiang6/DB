@@ -155,7 +155,7 @@ SQLRETURN RawLinker::InVarchar(int coln, SQLCHAR* tgt, int maxlen) {
 }
 SQLRETURN RawLinker::InFloat(int coln, float& tgt) {
 	SQLHDESC hdesc = NULL;
-	SQLGetStmtAttr(mStatement, SQL_ATTR_APP_ROW_DESC, &hdesc, 0, NULL); 
+	SQLGetStmtAttr(mStatement, SQL_ATTR_APP_PARAM_DESC, &hdesc, 0, NULL); 
 	SQLSetDescField(hdesc, coln, SQL_DESC_TYPE, (SQLPOINTER)SQL_DECIMAL, 0);
 	SQLSetDescField(hdesc, coln, SQL_DESC_PRECISION, (SQLPOINTER)8, 0);
 	SQLSetDescField(hdesc, coln, SQL_DESC_SCALE, (SQLPOINTER)2, 0);

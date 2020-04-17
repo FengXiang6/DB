@@ -71,6 +71,7 @@ public:
 	void UpdateFile();
 	void SearchForBook();
 	void CardManage();
+	void CreateCard();
 private:
 	void Initialize();
 	void Function();
