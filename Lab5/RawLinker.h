@@ -45,7 +45,7 @@ private:
 	SQLHDBC		mConn = nullptr;
 	SQLCHAR		mServerName[MaxConfigStrLen] = "lab5lms";
 	SQLCHAR		mUserName[MaxConfigStrLen] = "root";
-	SQLCHAR		mPassword[MaxConfigStrLen] = "fxfx123123";
+	SQLCHAR		mPassword[MaxConfigStrLen] = "**********";
 	SQLCHAR		mMsg[SQL_MAX_MESSAGE_LENGTH] = "";
 	SQLCHAR		mState[6] = "";
 	SQLINTEGER  mNativeError;
